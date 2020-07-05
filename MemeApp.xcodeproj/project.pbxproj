@@ -58,13 +58,29 @@
 			children = (
 				391E34D824B259A80034E602 /* AppDelegate.swift */,
 				391E34DA24B259A80034E602 /* SceneDelegate.swift */,
-				391E34DC24B259A80034E602 /* ViewController.swift */,
-				391E34DE24B259A80034E602 /* Main.storyboard */,
+				391E34EC24B259B80034E602 /* Controllers */,
+				391E34ED24B259C10034E602 /* Views */,
 				391E34E124B259A80034E602 /* Assets.xcassets */,
 				391E34E324B259A80034E602 /* LaunchScreen.storyboard */,
 				391E34E624B259A80034E602 /* Info.plist */,
 			);
 			path = MemeApp;
+			sourceTree = "<group>";
+		};
+		391E34EC24B259B80034E602 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				391E34DC24B259A80034E602 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		391E34ED24B259C10034E602 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				391E34DE24B259A80034E602 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
