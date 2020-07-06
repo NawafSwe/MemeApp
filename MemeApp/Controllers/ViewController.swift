@@ -11,14 +11,27 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var pickedImageView: UIImageView!
     @IBOutlet weak var chooseFromCamButton: UIBarButtonItem!
-    
-    
+    @IBOutlet weak var topField: UITextField!
+    @IBOutlet weak var bottomField : UITextField!
     let pickerController = UIImagePickerController()
+    
+    let memeTextAttributes: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.strokeColor: UIColor.black,
+        NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedString.Key.strokeWidth:  2.5
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setting the delegates
+        
         pickerController.delegate = self
-        // if the cam is not available we disable the button 
+        topField.delegate = self
+        bottomField.delegate  = self
+        // if the cam is not available we disable the button
         chooseFromCamButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        topField.defaultTextAttributes = memeTextAttributes
+        bottomField.defaultTextAttributes = memeTextAttributes
     }
     
     
@@ -49,12 +62,30 @@ extension ViewController :UIImagePickerControllerDelegate , UINavigationControll
         pickedImageView.contentMode = .scaleAspectFit
         dismiss(animated: true, completion: nil)
     }
-    
-
-    
-    
-    
-    
 }
+
+extension ViewController : UITextFieldDelegate{
+    
+     //when the user finish editing we remove the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //when press return quit the keyboard and end editing
+        textField.endEditing(true)
+        return true
+    }
+    //when the user can return if the field is empty then we cannot make it empty
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text == "" {
+            return false
+            
+        }else{
+            
+           return true
+        }
+    }
+    
+    //if the user starts editing we clear the text that inside the text field
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }}
 
 

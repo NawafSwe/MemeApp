@@ -33,25 +33,45 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-Wd-CC9">
+                                <rect key="frame" x="159" y="532" width="100" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iX8-MX-27w">
+                                <rect key="frame" x="159" y="330" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Oa2-ef-CdQ" firstAttribute="top" secondItem="iX8-MX-27w" secondAttribute="bottom" constant="8" id="4AW-Ee-4yj"/>
                             <constraint firstAttribute="bottom" secondItem="dez-MG-0Wj" secondAttribute="bottom" constant="30" id="9KD-9Y-dho"/>
+                            <constraint firstItem="iX8-MX-27w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="286" id="9xg-T8-G57"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QZx-Wd-CC9" secondAttribute="trailing" constant="155" id="G28-lB-4E5"/>
                             <constraint firstItem="Oa2-ef-CdQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IbX-6M-gV7"/>
+                            <constraint firstItem="iX8-MX-27w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Li2-wM-qph"/>
                             <constraint firstItem="dez-MG-0Wj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W0p-jn-Ghp"/>
                             <constraint firstItem="dez-MG-0Wj" firstAttribute="top" secondItem="Oa2-ef-CdQ" secondAttribute="bottom" constant="293" id="Zfp-m4-MW6"/>
+                            <constraint firstItem="QZx-Wd-CC9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="cdX-WZ-ux8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oa2-ef-CdQ" secondAttribute="trailing" constant="87" id="cdl-ht-3NS"/>
+                            <constraint firstItem="QZx-Wd-CC9" firstAttribute="top" secondItem="Oa2-ef-CdQ" secondAttribute="bottom" constant="8" id="eK7-tA-0oA"/>
                             <constraint firstItem="Oa2-ef-CdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="g0j-VF-3e7"/>
                             <constraint firstItem="dez-MG-0Wj" firstAttribute="top" secondItem="Oa2-ef-CdQ" secondAttribute="bottom" constant="293" id="ikr-r2-aNm"/>
+                            <constraint firstItem="dez-MG-0Wj" firstAttribute="top" secondItem="QZx-Wd-CC9" secondAttribute="bottom" constant="251" id="kj9-X0-XIO"/>
                             <constraint firstItem="dez-MG-0Wj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBL-XX-8Rp"/>
                             <constraint firstItem="Oa2-ef-CdQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sj0-Gb-sYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iX8-MX-27w" secondAttribute="trailing" constant="158" id="vbJ-KB-32c"/>
                             <constraint firstItem="Oa2-ef-CdQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="328" id="vsO-w3-tJY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomField" destination="QZx-Wd-CC9" id="W2r-ey-hHk"/>
                         <outlet property="chooseFromCamButton" destination="SEJ-Yt-xBx" id="SdY-TP-2qD"/>
                         <outlet property="pickedImageView" destination="Oa2-ef-CdQ" id="Jf9-Sb-Hc1"/>
+                        <outlet property="topField" destination="iX8-MX-27w" id="JbP-gV-3Px"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
