@@ -16,58 +16,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x3x-Eh-ker">
-                                <rect key="frame" x="87" y="389" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="730" id="eKh-xJ-7Ab"/>
+                                    <constraint firstAttribute="width" constant="414" id="rQD-lt-GKf"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-3p-Ci9">
-                                <rect key="frame" x="126" y="343" width="162" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="tcb-ux-O9X"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="snm-W2-fVE">
-                                <rect key="frame" x="126" y="529" width="162" height="34"/>
+                                <rect key="frame" x="20" y="737" width="374" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="1Qv-hj-5G1"/>
+                                    <constraint firstAttribute="height" constant="44" id="CRD-Dm-6PB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ujn-uo-Tt0">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ujn-uo-Tt0">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="QSH-w2-owq"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Add from Library" id="740-M2-Opl">
                                         <connections>
-                                            <action selector="addPhotoPressed:" destination="BYZ-38-t0r" id="Td5-Wo-DUU"/>
+                                            <action selector="addPhotoPressed:" destination="BYZ-38-t0r" id="Rzh-CG-9RJ"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Take Photo" id="ePA-fK-aiV"/>
+                                    <barButtonItem title="Take Photo" id="ePA-fK-aiV">
+                                        <connections>
+                                            <action selector="chooseFromCamPressed:" destination="BYZ-38-t0r" id="cHd-TR-xPP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Dgu-3p-Ci9">
+                                <rect key="frame" x="20" y="102" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OZE-Ff-H7v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tci-EG-Bgg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rt1-n5-2wN"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="hXU-cs-Bvp">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="k8u-8B-Uia">
+                                            <connections>
+                                                <action selector="onClickShareButton:" destination="BYZ-38-t0r" id="EVR-Aj-HiE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dgu-3p-Ci9" secondAttribute="trailing" constant="126" id="0BE-Ck-rl4"/>
-                            <constraint firstItem="x3x-Eh-ker" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.57971" id="FEU-aa-uZR"/>
-                            <constraint firstItem="x3x-Eh-ker" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.156479" id="WEf-aj-gon"/>
-                            <constraint firstItem="snm-W2-fVE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJv-xK-uRX"/>
-                            <constraint firstItem="snm-W2-fVE" firstAttribute="top" secondItem="x3x-Eh-ker" secondAttribute="bottom" constant="12" id="gjv-qb-JzA"/>
-                            <constraint firstItem="snm-W2-fVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="i2h-97-UMA"/>
-                            <constraint firstItem="x3x-Eh-ker" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="j5p-4O-Zfp"/>
-                            <constraint firstItem="x3x-Eh-ker" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rRZ-K4-L6Z"/>
-                            <constraint firstItem="Dgu-3p-Ci9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="s3G-v2-hPN"/>
-                            <constraint firstItem="x3x-Eh-ker" firstAttribute="top" secondItem="Dgu-3p-Ci9" secondAttribute="bottom" constant="12" id="sPo-MV-tA3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="snm-W2-fVE" secondAttribute="trailing" constant="126" id="tc7-g6-ipz"/>
-                            <constraint firstItem="Dgu-3p-Ci9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoq-1m-O7V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dgu-3p-Ci9" secondAttribute="trailing" constant="20" id="2wf-FI-01u"/>
+                            <constraint firstItem="Ujn-uo-Tt0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Nh-iF-LkG"/>
+                            <constraint firstItem="x3x-Eh-ker" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8lC-z6-lwr"/>
+                            <constraint firstItem="Ujn-uo-Tt0" firstAttribute="top" secondItem="snm-W2-fVE" secondAttribute="bottom" constant="37" id="9IE-ii-SUz"/>
+                            <constraint firstItem="Dgu-3p-Ci9" firstAttribute="top" secondItem="Tci-EG-Bgg" secondAttribute="bottom" constant="14" id="E0X-L9-7uc"/>
+                            <constraint firstItem="Tci-EG-Bgg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LtY-cc-Enc"/>
+                            <constraint firstItem="snm-W2-fVE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YQs-uH-Fjf"/>
+                            <constraint firstItem="x3x-Eh-ker" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bmx-hN-gV8"/>
+                            <constraint firstItem="Ujn-uo-Tt0" firstAttribute="top" secondItem="x3x-Eh-ker" secondAttribute="bottom" id="e84-a7-RA4"/>
+                            <constraint firstItem="Ujn-uo-Tt0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eYR-R6-tso"/>
+                            <constraint firstItem="Ujn-uo-Tt0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q1x-uj-e0s"/>
+                            <constraint firstItem="Tci-EG-Bgg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sfx-0j-PWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="snm-W2-fVE" secondAttribute="trailing" constant="20" id="ti0-zK-dG0"/>
+                            <constraint firstItem="Dgu-3p-Ci9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uJt-oJ-Enf"/>
+                            <constraint firstItem="Tci-EG-Bgg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vry-As-p5f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomField" destination="snm-W2-fVE" id="Ea1-xl-Jlr"/>
+                        <outlet property="navigationBar" destination="Tci-EG-Bgg" id="k05-k4-e4t"/>
                         <outlet property="pickedImageView" destination="x3x-Eh-ker" id="hIo-04-ejp"/>
                         <outlet property="takePhotoButton" destination="ePA-fK-aiV" id="Wqc-OE-emz"/>
+                        <outlet property="toolbar" destination="Ujn-uo-Tt0" id="0B5-Ct-r3O"/>
                         <outlet property="topField" destination="Dgu-3p-Ci9" id="df2-PK-Cee"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@
 		391E34E024B259A80034E602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E34DE24B259A80034E602 /* Main.storyboard */; };
 		391E34E224B259A80034E602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391E34E124B259A80034E602 /* Assets.xcassets */; };
 		391E34E524B259A80034E602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 391E34E324B259A80034E602 /* LaunchScreen.storyboard */; };
+		39610AB724B9E16200496925 /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39610AB624B9E16200496925 /* MemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		391E34E124B259A80034E602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		391E34E424B259A80034E602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		391E34E624B259A80034E602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39610AB624B9E16200496925 /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		391E34D724B259A80034E602 /* MemeApp */ = {
 			isa = PBXGroup;
 			children = (
+				39610AB524B9E14C00496925 /* Models */,
 				391E34D824B259A80034E602 /* AppDelegate.swift */,
 				391E34DA24B259A80034E602 /* SceneDelegate.swift */,
 				391E34EC24B259B80034E602 /* Controllers */,
@@ -81,6 +84,14 @@
 				391E34DE24B259A80034E602 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		39610AB524B9E14C00496925 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39610AB624B9E16200496925 /* MemeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 				391E34DD24B259A80034E602 /* ViewController.swift in Sources */,
 				391E34D924B259A80034E602 /* AppDelegate.swift in Sources */,
 				391E34DB24B259A80034E602 /* SceneDelegate.swift in Sources */,
+				39610AB724B9E16200496925 /* MemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
